@@ -4,7 +4,7 @@ class Article < ActiveRecord::Base
 	validates :body, presence: true
 
 	## Associations
-	# belongs_to :author, :class_name => "User"
-	belongs_to :user
+	belongs_to :author, :class_name => "User", :foreign_key => :user_id
+	
 	has_many :comments, :as => :commentable, :dependent => :destroy
 end

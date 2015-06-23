@@ -8,6 +8,9 @@
   <dd><%= @article.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
   <dd><%= @article.body %></dd>
+  <dt><strong> Author:</strong></dt>
+  <dd><%= @article.author.try(:email) %></dd>
+
   <dt><strong> Comments: </strong></dt>
   <dd> 
     <div><%= render @article.comments %></div>
