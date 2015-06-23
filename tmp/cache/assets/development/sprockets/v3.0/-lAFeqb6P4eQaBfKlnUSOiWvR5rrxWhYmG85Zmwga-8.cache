@@ -1,0 +1,11 @@
+I"¥(function() {
+  jQuery(function() {
+    return $(".comment-form").on("ajax:beforeSend", function(evt, xhr, settings) {
+      return $(this).find('textarea').addClass('uneditable-input').attr('disabled', 'disabled');
+    }).on("ajax:success", function(evt, data, status, xhr) {
+      return $(this).find('textarea').removeClass('uneditable-input').removeAttr('disabled', 'disabled').val('');
+    });
+  });
+
+}).call(this);
+:ET

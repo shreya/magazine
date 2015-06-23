@@ -1,0 +1,23 @@
+  <div class="outer_comment">
+    <div class="content">
+      <%= comment.body %>
+    </div>
+    <div class="created_at">
+      <small>At <%= comment.created_at.strftime("%B %d, %Y") %></small><br/>
+      <small>By <%= comment.user.email %></small>      
+    </div>  
+
+    <div class="actions">
+      <%#= link_to "Reply", new_comment_path(:parent_id => comment) %> |
+      Reply: <%= render :partial => "comments/form", :locals => {:parent => comment} %>
+      <% if current_user.can_delete?(comment) %>
+        <%= link_to "Destroy", comment_path(comment), :method => :delete %>
+      <% end %>
+    </div>
+  </div>
+  <div class="comment"> <%= render :partial => comment.comments %></div>    
+  
+
+  
+
+  
