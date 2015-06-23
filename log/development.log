@@ -5177,3 +5177,34 @@ Processing by ArticlesController#show as HTML
   Rendered comments/_form.html.erb (16.2ms)
   Rendered articles/show.html.erb within layouts/application (736.1ms)
 Completed 200 OK in 3803ms (Views: 3710.5ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2015-06-24 03:37:42 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles`
+  Rendered articles/index.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 1676ms (Views: 1660.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2015-06-24 03:37:46 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered articles/_form.html.erb (27.1ms)
+  Rendered articles/edit.html.erb within layouts/application (107.1ms)
+Completed 200 OK in 1591ms (Views: 1575.1ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/articles/1" for 127.0.0.1 at 2015-06-24 03:37:53 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"20OCd8mh8wMLjtsR/dMn8o0fDksK2mZMhhAzeTaiHd5qEV/3N3a1q01cSyr88gG+IkRoHT/SmI/slwPJkXNJ+w==", "article"=>{"title"=>"article1", "body"=>""}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle Exists (0.9ms)[0m  SELECT  1 AS one FROM `articles` WHERE (`articles`.`title` = BINARY 'article1' AND `articles`.`id` != 1) LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  Rendered articles/_form.html.erb (92.2ms)
+  Rendered articles/edit.html.erb within layouts/application (105.7ms)
+Completed 200 OK in 1701ms (Views: 1589.2ms | ActiveRecord: 2.9ms)
