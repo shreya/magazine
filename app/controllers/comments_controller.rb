@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_comment, only: [:destroy]
-
+  before_action :can_delete, only: [:destroy]
   # POST /comments
   # POST /comments.json
   def create
@@ -30,6 +30,12 @@ class CommentsController < ApplicationController
         @comment = Comment.find(params[:id])
       rescue ActiveRecord::RecordNotFound => e
         return redirect_to root_path, :notice => "Could not find comment"
+      end
+    end
+
+    def can_delete
+      unless current_user.can_delete?(@comment)
+        return redirect_to root_path, :notice => "Only author can delete comment"
       end
     end
 

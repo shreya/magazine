@@ -5208,3 +5208,490 @@ Processing by ArticlesController#update as HTML
   Rendered articles/_form.html.erb (92.2ms)
   Rendered articles/edit.html.erb within layouts/application (105.7ms)
 Completed 200 OK in 1701ms (Views: 1589.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:38:54 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (0.5ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (8.3ms)
+  Rendered comments/_comment.html.erb (23.3ms)
+  Rendered articles/show.html.erb within layouts/application (45.0ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 2.4ms)
+
+SyntaxError (/media/DATAPART1/ror/new/magazine/app/views/comments/_form.html.erb:19: syntax error, unexpected ')', expecting :: or '[' or '.'
+...er.append=( f.submit, "Reply" );@output_buffer.safe_append='...
+...                               ^
+/media/DATAPART1/ror/new/magazine/app/views/comments/_form.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/media/DATAPART1/ror/new/magazine/app/views/comments/_form.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/media/DATAPART1/ror/new/magazine/app/views/comments/_form.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/comments/_form.html.erb:19: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/comments/_form.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+  app/views/comments/_form.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/comments/_form.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+  app/views/comments/_comment.html.erb:12:in `_app_views_comments__comment_html_erb__4448624827803868187_70112227246200'
+  app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb__194809420809005615_70112226158820'
+
+
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (500.4ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (107.7ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (629.8ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (57.9ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (28.0ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/shreya/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (114.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:39:05 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (9.1ms)
+  [1m[35mComment Exists (0.6ms)[0m  SELECT  1 AS one FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment' LIMIT 1
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment'[0m
+  [1m[35mCACHE (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (17.8ms)
+  [1m[36mComment Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment' LIMIT 1[0m
+  [1m[35mComment Load (0.6ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (56.8ms)
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (5.7ms)
+  [1m[35mComment Exists (0.5ms)[0m  SELECT  1 AS one FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment' LIMIT 1
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment'[0m
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (273.2ms)
+  Rendered comments/_form.html.erb (11.2ms)
+  Rendered articles/show.html.erb within layouts/application (325.1ms)
+Completed 200 OK in 1951ms (Views: 1929.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-24 03:39:08 +0530
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-06-24 03:39:08 +0530
+
+
+Started GET "/assets/style.self-af4b4a778bdedb209169f72bdd7ede20ef8fc229be07fbe14e2e21fb5121fdb3.css?body=1" for 127.0.0.1 at 2015-06-24 03:39:08 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-06-24 03:39:08 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:09 +0530
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-24 03:39:09 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:09 +0530
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:10 +0530
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:11 +0530
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:11 +0530
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:11 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:11 +0530
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:11 +0530
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:11 +0530
+
+
+Started GET "/assets/comments.self-ffeda056eed9747118e32eca8ba9846a04ef5dc68084d68a7abf1b1f9934ecc7.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:12 +0530
+
+
+Started GET "/assets/magazine_books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:12 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-06-24 03:39:12 +0530
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-06-24 03:39:42 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M7cUAxjR4YtA3EPaBSK2WJZIrq3SDvv9cJnwMkfPHXuC5cmD5ganIwYO0+EEA5AUORPI++cGBT4aHsCC4B5JXg=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 97ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-24 03:39:42 +0530
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-24 03:39:42 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 1664ms (Views: 1656.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-24 03:39:47 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (91.3ms)
+Completed 200 OK in 1613ms (Views: 1606.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-06-24 03:40:03 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIaVwaYbt/na0XnAdTvS2A1nb2i8qHZ1X5oCUPV4Hv6UeXtFfDW0NQpUlZGpvY5sEl0lkhzJC0O+g2SfVch7iw==", "user"=>{"email"=>"shreya@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'shreya@gmail.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('shreya@gmail.com', '$2a$10$kxTYlqVBVk0bbpYBEpHG2OnHQr3mdu9.hGK6.C8/Q4JJR45PY/HGK', '2015-06-23 22:10:04', '2015-06-23 22:10:04')[0m
+  [1m[35m (68.4ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-06-23 22:10:04', `current_sign_in_at` = '2015-06-23 22:10:04', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2015-06-23 22:10:04' WHERE `users`.`id` = 2
+  [1m[36m (58.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 443ms (ActiveRecord: 130.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-24 03:40:04 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles`[0m
+  Rendered articles/index.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 1734ms (Views: 1720.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:40:08 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (0.5ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (9.7ms)
+  [1m[35mComment Load (0.6ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment'
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (63.4ms)
+  [1m[35mComment Load (0.5ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (86.2ms)
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (7.6ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (150.6ms)
+  Rendered comments/_form.html.erb (7.8ms)
+  Rendered articles/show.html.erb within layouts/application (301.5ms)
+Completed 200 OK in 1765ms (Views: 1747.3ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/comments/1/comments" for 127.0.0.1 at 2015-06-24 03:40:22 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"la64e7c1WHZcnfKHhcQwHi7YYHJ7NJtIAo8+snD6kDQ1UVb/bRtbuowYHtZZQmyqMeIqiNtV5n7jllh90Er1QQ==", "comment"=>{"body"=>"reply2"}, "commit"=>"Create Comment", "comment_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mComment Load (1.0ms)[0m  SELECT  `comments`.* FROM `comments` WHERE `comments`.`id` = 1 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `comments` (`body`, `commentable_id`, `commentable_type`, `user_id`, `created_at`, `updated_at`) VALUES ('reply2', 1, 'Comment', 2, '2015-06-23 22:10:23', '2015-06-23 22:10:23')
+  [1m[36m (57.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 191ms (ActiveRecord: 60.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:40:23 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (0.9ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (11.4ms)
+  [1m[35mComment Load (1.0ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment'
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (10.4ms)
+  [1m[35mComment Load (0.9ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered comments/_form.html.erb (9.2ms)
+  [1m[35mComment Exists (0.9ms)[0m  SELECT  1 AS one FROM `comments` WHERE `comments`.`commentable_id` = 4 AND `comments`.`commentable_type` = 'Comment' LIMIT 1
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 4 AND `comments`.`commentable_type` = 'Comment'[0m
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (140.9ms)
+  [1m[35mCACHE (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (8.0ms)
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment'[0m
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (268.2ms)
+  Rendered comments/_form.html.erb (67.9ms)
+  Rendered articles/show.html.erb within layouts/application (379.4ms)
+Completed 200 OK in 2004ms (Views: 1981.4ms | ActiveRecord: 7.9ms)
+
+
+Started DELETE "/comments/4" for 127.0.0.1 at 2015-06-24 03:40:35 +0530
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/x2M8NvClAG8MBzu/gTS4cqu1CXfoYdCiqQU0tBp9SFf4mJ0AeyXzWy18L8igo5V1ZSe33/A+nRrvXIdcNmQVA==", "id"=>"4"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mComment Load (58.6ms)[0m  [1mSELECT  `comments`.* FROM `comments` WHERE `comments`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 4 AND `comments`.`commentable_type` = 'Comment'[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM `comments` WHERE `comments`.`id` = 4
+  [1m[36m (197.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 296ms (ActiveRecord: 258.7ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:40:36 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (1.0ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (17.0ms)
+  [1m[35mComment Load (1.0ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment'
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (7.6ms)
+  [1m[35mComment Load (0.9ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (89.2ms)
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (7.6ms)
+  [1m[35mComment Load (0.9ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (171.6ms)
+  Rendered comments/_form.html.erb (68.7ms)
+  Rendered articles/show.html.erb within layouts/application (287.5ms)
+Completed 200 OK in 1926ms (Views: 1846.5ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/comments/1/comments" for 127.0.0.1 at 2015-06-24 03:40:46 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Arw88lqyqYBEINVRLNZuUlrp+cGyFgcerXOf4Y56dDSiQ9J2gJyqTJSlOQDwUDLmRdOzOxJ3eihMavkuLsoRQQ==", "comment"=>{"body"=>"reply2"}, "commit"=>"Create Comment", "comment_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT  `comments`.* FROM `comments` WHERE `comments`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `comments` (`body`, `commentable_id`, `commentable_type`, `user_id`, `created_at`, `updated_at`) VALUES ('reply2', 1, 'Comment', 2, '2015-06-23 22:10:46', '2015-06-23 22:10:46')
+  [1m[36m (58.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 168ms (ActiveRecord: 59.7ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:40:46 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (0.9ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (69.9ms)
+  [1m[35mComment Load (0.9ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment'
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (7.8ms)
+  [1m[35mComment Load (0.8ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered comments/_form.html.erb (8.0ms)
+  [1m[35mComment Exists (0.8ms)[0m  SELECT  1 AS one FROM `comments` WHERE `comments`.`commentable_id` = 5 AND `comments`.`commentable_type` = 'Comment' LIMIT 1
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 5 AND `comments`.`commentable_type` = 'Comment'[0m
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (128.4ms)
+  [1m[35mCACHE (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (7.5ms)
+  [1m[36mComment Load (1.2ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment'[0m
+  Rendered collection (0.7ms)
+  Rendered comments/_comment.html.erb (258.6ms)
+  Rendered comments/_form.html.erb (67.9ms)
+  Rendered articles/show.html.erb within layouts/application (359.7ms)
+Completed 200 OK in 1988ms (Views: 1966.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:42:40 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (18.5ms)
+  [1m[35mComment Load (0.5ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment'
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (7.7ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered comments/_form.html.erb (65.0ms)
+  [1m[35mComment Exists (0.7ms)[0m  SELECT  1 AS one FROM `comments` WHERE `comments`.`commentable_id` = 5 AND `comments`.`commentable_type` = 'Comment' LIMIT 1
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 5 AND `comments`.`commentable_type` = 'Comment'[0m
+  Rendered collection (0.8ms)
+  Rendered comments/_comment.html.erb (147.1ms)
+  [1m[35mCACHE (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (67.2ms)
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment'[0m
+  Rendered collection (0.2ms)
+  Rendered comments/_comment.html.erb (385.0ms)
+  Rendered comments/_form.html.erb (7.6ms)
+  Rendered articles/show.html.erb within layouts/application (499.3ms)
+Completed 200 OK in 2379ms (Views: 2111.0ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-24 03:42:44 +0530
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-06-24 03:42:44 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-06-24 03:42:45 +0530
+
+
+Started GET "/assets/style.self-af4b4a778bdedb209169f72bdd7ede20ef8fc229be07fbe14e2e21fb5121fdb3.css?body=1" for 127.0.0.1 at 2015-06-24 03:42:45 +0530
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-24 03:42:45 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:45 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:45 +0530
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:45 +0530
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:46 +0530
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:47 +0530
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:47 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:48 +0530
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:48 +0530
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:48 +0530
+
+
+Started GET "/assets/comments.self-ffeda056eed9747118e32eca8ba9846a04ef5dc68084d68a7abf1b1f9934ecc7.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:48 +0530
+
+
+Started GET "/assets/magazine_books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:48 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-06-24 03:42:48 +0530
+
+
+Started DELETE "/comments/5" for 127.0.0.1 at 2015-06-24 03:42:54 +0530
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UFGpQ+Mdshse8fjesBgVmQP+BgDKRUsGi7cB4eOZZ5bwrkfHOTOx1850FI9snkktHMRM+mokNjBqrmcuQykC4w==", "id"=>"5"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mComment Load (1.1ms)[0m  [1mSELECT  `comments`.* FROM `comments` WHERE `comments`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mComment Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `comments` WHERE `comments`.`commentable_id` = 5 AND `comments`.`commentable_type` = 'Comment' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 5 AND `comments`.`commentable_type` = 'Comment'[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM `comments` WHERE `comments`.`id` = 5
+  [1m[36m (90.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 396ms (ActiveRecord: 97.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2015-06-24 03:42:55 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mComment Load (1.0ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Article'
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered comments/_form.html.erb (17.0ms)
+  [1m[35mComment Load (1.1ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 1 AND `comments`.`commentable_type` = 'Comment'
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (13.8ms)
+  [1m[35mComment Load (1.1ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 2 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.3ms)
+  Rendered comments/_comment.html.erb (179.8ms)
+  [1m[36mCACHE (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (12.3ms)
+  [1m[35mComment Load (1.0ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 3 AND `comments`.`commentable_type` = 'Comment'
+  Rendered collection (0.3ms)
+  Rendered comments/_comment.html.erb (415.7ms)
+  Rendered comments/_form.html.erb (12.1ms)
+  Rendered articles/show.html.erb within layouts/application (539.2ms)
+Completed 200 OK in 3789ms (Views: 3758.2ms | ActiveRecord: 7.9ms)
