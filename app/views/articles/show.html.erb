@@ -10,11 +10,12 @@
   <dd><%= @article.body %></dd>
   <dt><strong> Author:</strong></dt>
   <dd><%= @article.author.try(:email) %></dd>
-
-  <dt><strong> Comments: </strong></dt>
-  <dd> 
-    <div><%= render @article.comments %></div>
-  </dd>
+  <% if @article.comments.any? %>
+    <dt><strong> Comments: </strong></dt>
+    <dd> 
+      <div><%= render @article.comments %></div>
+    </dd>
+  <% end %>
   <dt><strong>Add a comment:</strong></dt>
   <dd>    
       <%= render :partial => "comments/form", :locals => {:parent => @article} %>
@@ -25,8 +26,3 @@
               articles_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_article_path(@article), :class => 'btn btn-default' %>
-<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              article_path(@article),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
